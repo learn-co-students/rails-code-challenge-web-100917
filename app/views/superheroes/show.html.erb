@@ -1,0 +1,8 @@
+<h1><%= @superhero.super_name %></h1>
+<h2>Real Name: <%= @superhero.name %></h2>
+
+<h3>Superpower:</h3>
+<% superpower = Superpower.find(@superhero.superpower_id)  %>
+<p><%= link_to superpower.name, superpower_path(superpower.id) %></p>
+<p><%= superpower.description %></p>
+</li>
