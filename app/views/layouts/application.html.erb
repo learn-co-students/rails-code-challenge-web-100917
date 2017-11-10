@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to "Superheroes", superheroes_path %>
+        <%= link_to "Superpowers", superpowers_path %>
+        <%= link_to "Create A Superhero", new_superhero_path %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
