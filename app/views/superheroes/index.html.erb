@@ -1,10 +1,17 @@
 <h2>All Superheroes</h2>
+<%= form_for :superhero, url: superheroes_path do |f| %>
+  
+  <%= f.collection_select :superpower, Superpower.all, :id, :name%>
+  <%= submit_tag "Filter" %>
+<% end %>
 
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.name, superhero_path(superhero) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<p><%= link_to "New Superhero", new_superhero_path%></p>
