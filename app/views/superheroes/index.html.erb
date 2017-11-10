@@ -3,8 +3,24 @@
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero_path(superhero) %>
     </li>
     <br>
   <% end %>
+</ul>
+
+<h2>Search for Superheroes by Superpower</h2>
+<!-- <ul>
+  <#%@superpowers = Superpower.all%>
+  <#%@superpowers.each do |superpower|%>
+    <#%
+    <li><#%=link_to superpower.name, superheroes_path(superpower.superheroes)%></li>
+#<#%end%>
+</ul> -->
+<ul>
+  <%superpowers=Superpower.all%>
+  <li><%=link_to superpowers.first.name, url: index1%></li>
+  <li><%=link_to superpowers.first.name, url: index1%></li>
+  <li><%=link_to superpowers.first.name, url: index1%></li>
+  <li></li>
 </ul>

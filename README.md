@@ -28,7 +28,7 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 ![img](gif2.gif)
 
-1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the superheroes and powers have been created with the proper relations.
+1. Create the associations between models. You may have to alter the current schema to get your code working. If you've set up your relationships properly, you should be able to run `rake db:seed` without errors, and confirm in console that the superheroes and powers have been created with the proper relations. X
 
 2. On the superheroes index page, a superhero's name should link to the superhero's show page.
 
