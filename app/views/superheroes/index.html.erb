@@ -1,10 +1,17 @@
 <h2>All Superheroes</h2>
 
-<ul>
-  <% @superheroes.each do |superhero| %>
-    <li>
-      <%= superhero.super_name %>
-    </li>
-    <br>
+<%= form_tag("/superheroes", method: "get") do %>
+  <b><%= label_tag(:search, "Search by a Superpower") %></b>
+  <br>
+  <%= text_field_tag(:search) %>
+  <%= submit_tag("Search") %><br>
+<% end %>
+
+  <ul>
+    <% @superheroes.each do |superhero| %>
+      <li>
+        <%= link_to superhero.super_name, superhero %>
+      </li>
+      <br>
+  </ul>
   <% end %>
-</ul>
