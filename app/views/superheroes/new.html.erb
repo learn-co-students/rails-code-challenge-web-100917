@@ -1,0 +1,23 @@
+<%= form_for @superhero do |f| %>
+  <%= f.label :name %><br>
+  <% if !@superhero.errors[:name].empty? %>
+    <ul>
+    <% @superhero.errors.full_messages_for(:name).each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <%= f.text_field :name %><br>
+  <%= f.label :super_name %><br>
+  <% if !@superhero.errors[:super_name].empty? %>
+    <ul>
+    <% @superhero.errors.full_messages_for(:super_name).each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <%= f.text_field :super_name %><br>
+  <%= f.label :superpower_id %><br>
+  <%= f.collection_select :superpower_id, Superpower.all, :id, :name, {:prompt => 'please select'} %><br>
+  <%= f.submit %>
+<% end %>

@@ -1,10 +1,19 @@
-<h2>All Superheroes</h2>
+<div class="jumbotron">
+  <h1>All Superheroes</h1>
+</div>
 
-<ul>
+<%= form_tag(search_path, method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search", class: "btn btn-success") %>
+<% end %>
+
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+<ul class="list-group">
   <% @superheroes.each do |superhero| %>
-    <li>
-      <%= superhero.super_name %>
-    </li>
-    <br>
+    <li class="list-group-item"><%= link_to superhero.super_name, superhero_path(superhero) %></li>
   <% end %>
 </ul>
