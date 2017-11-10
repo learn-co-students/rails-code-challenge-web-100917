@@ -6,9 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+    <%= link_to "Superheroes", superheroes_path %>
+    <%= link_to "Superpowers", superpowers_path %>
+    <%= link_to "Create a New Superhero", new_superhero_path %>
     <%= yield %>
   </body>
 </html>
