@@ -1,0 +1,33 @@
+<h1>Create a Super Hero!</h1>
+
+<% if @superhero.errors.any? %>
+  <% @superhero.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
+
+<br>
+<br>
+
+<%= form_for @superhero do |f| %>
+  <%= f.label :super_name %>
+  <br>
+  <%= f.text_field :super_name %>
+  <br>
+  <br>
+
+  <%= f.label :name %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <br>
+
+  <%= f.collection_select :superpower_id, Superpower.all, :id, :name  %>
+
+  <%= f.submit "Make a Super Hero!" %>
+<% end %>
+
+<br>
+<br>
+<br>

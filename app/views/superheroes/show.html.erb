@@ -1,0 +1,6 @@
+<h1><%= @superhero.super_name %></h1>
+
+<h2>Secret Identity: <%= @superhero.name %></h2>
+
+<h2>Super Power: <%= link_to @superhero.superpower.name, superpower_path(@superhero.superpower) %></h2>
+<p>Description: <%= @superhero.superpower.description %></p>
