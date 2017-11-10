@@ -10,5 +10,8 @@
 
   <body>
     <%= yield %>
+
+<%= button_to "All Heroes", superheroes_path, method: :get %>
+<%= button_to "All Powers", superpowers_path, method: :get %>
   </body>
 </html>
