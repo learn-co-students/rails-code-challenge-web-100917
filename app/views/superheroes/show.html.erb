@@ -1,0 +1,3 @@
+<p>Real Identity: <%= @superhero.name %></p>
+<p>Super Identity: <%= @superhero.super_name %></p>
+<p>Super Power: <%= link_to @superhero.superpower.name, superpower_path(@superhero.superpower.id)%></p>
