@@ -36,7 +36,7 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 4. The superpower show page should have its name and description.
 
-5. Add a filter to the index view of the superheroes. This will allow the visitor to search for an existing superpower and display all the superheroes with that superpower on the same view page.
+#######5. Add a filter to the index view of the superheroes. This will allow the visitor to search for an existing superpower and display all the superheroes with that superpower on the same view page.
 
 ![img](gif3.gif)
 
